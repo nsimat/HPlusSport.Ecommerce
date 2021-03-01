@@ -13,5 +13,12 @@ namespace HPlusSport.Ecommerce.Controllers
         {
             return View();
         }
+
+        [Route("product/{productName}")]
+        public ActionResult Detail(string productName)
+        {
+            // lookup the product name in the database
+            return View();
+        }
     }
 }
