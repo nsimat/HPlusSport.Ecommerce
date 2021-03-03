@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using HPlusSport.Ecommerce.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace HPlusSport.Ecommerce
@@ -8,6 +9,7 @@ namespace HPlusSport.Ecommerce
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new LogRequestFilter());
         }
     }
 }

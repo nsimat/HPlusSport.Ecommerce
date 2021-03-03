@@ -12,14 +12,15 @@ namespace HPlusSport.Ecommerce.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var log = new { 
-            Controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
-            Action = filterContext.ActionDescriptor.ActionName,
-            IP = filterContext.HttpContext.Request.UserHostAddress,
-            DateTime = filterContext.HttpContext.Timestamp
+            var log = new
+            {
+                Controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
+                Action     = filterContext.ActionDescriptor.ActionName,
+                IP         = filterContext.HttpContext.Request.UserHostAddress,
+                DateTime   = filterContext.HttpContext.Timestamp
             };
 
-            Debug.WriteLine(JsonConvert.SerializeObject(log));            
+            Debug.WriteLine(JsonConvert.SerializeObject(log));
         }
     }
 }
