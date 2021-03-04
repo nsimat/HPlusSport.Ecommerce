@@ -138,6 +138,8 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Filters\CrawlerFilter.cs" />
+    <Compile Include="Filters\CustomExceptionHandler.cs" />
     <Compile Include="Filters\LogRequestFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -163,6 +165,7 @@
     <Content Include="Content\Images\Products\6.jpg" />
     <Content Include="Content\Images\Products\7.jpg" />
     <Content Include="Content\Images\Products\8.jpg" />
+    <Content Include="error\500.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
