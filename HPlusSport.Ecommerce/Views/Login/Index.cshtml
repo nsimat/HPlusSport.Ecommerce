@@ -6,6 +6,9 @@
 
 <div class="container">
     <form action="@Request.Url.PathAndQuery" method="post" class="form-signin">
+        @if (IsPost) { 
+          <div class="alert alert-danger">Invalid login attempt</div> 
+        }
         <fieldset>
             <legend class="form-signin-heading row">Please sign in</legend>
             <div class="form-group row">

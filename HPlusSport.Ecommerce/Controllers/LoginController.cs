@@ -23,6 +23,7 @@ namespace HPlusSport.Ecommerce.Controllers
                 FormsAuthentication.SetAuthCookie(userName, false);
                 return Redirect(FormsAuthentication.GetRedirectUrl(userName, false));
             }
+            
             return View();
         }
     }

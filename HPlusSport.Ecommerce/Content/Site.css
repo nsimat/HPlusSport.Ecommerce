@@ -298,14 +298,16 @@ h3.h3 {
             z-index: 2;
         }
 
-   /* .form-signin input[type="email"] {
-        margin-bottom: -1px;
-        border-bottom-right-radius: 3px;
+    .form-signin input[type="email"] {
+        /*margin-bottom: -1px;*/
+        /*border-bottom-right-radius: 3px;*/
+        border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
 
     .form-signin input[type="password"] {
-        margin-bottom: -1px;
+        /*margin-bottom: -1px;*/
         border-top-left-radius: 0;
-        border-top-right-radius: 3px;
-    }*/
+        border-bottom-left-radius: 0;
+        /*border-top-right-radius: 3px;*/
+    }
