@@ -1,39 +1,43 @@
-﻿
+﻿@model HPlusSport.Ecommerce.Models.Login
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
-    <form action="@Request.Url.PathAndQuery" method="post" class="form-signin">
-        @if (IsPost) { 
-          <div class="alert alert-danger">Invalid login attempt</div> 
+    @using (Html.BeginForm("Index", "Login", new { ReturnUrl = Request.QueryString["ReturnUrl"] }, FormMethod.Post, new { @class = "form-signin"} ))
+    {
+        if (IsPost)
+        {
+            <div class="alert alert-danger">Invalid login attempt</div>
         }
         <fieldset>
             <legend class="form-signin-heading row">Please sign in</legend>
             <div class="form-group row">
-                <label for="username" class="sr-only">Email address</label>
+                @Html.LabelFor(m => m.Username, "Email address", new { @class = "sr-only", @for = "username" })
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="label1"><i class="fas fa-user"></i></span>
                 </div>
-                <input type="email" id="username" name="username" class="form-control" placeholder="Email address" aria-describedby="label1">
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", value = "@(Model?.Username ?? '')", placeholder = "Email address", autofocus = "", type = "email", name = "username", aria_describedby = "label1" })
             </div>
-            <div class="form-group row">
-                <label for="password" class="sr-only">Password</label>
+            <div class="form-group row">                
+                @Html.LabelFor(m => m.Password, "Password", new { @class = "sr-only", @for = "password" })
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="label2"><i class="fas fa-lock"></i></span>
                 </div>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Password" aria-describedby="label2">
+                @Html.TextBoxFor(m => m.Password, new { type = "password", @class = "form-control", name = "password", id = "password", placeholder = "Password", aria_describedby = "label2" })
             </div>
             <div class="form-check row">
                 <label class="form-check-label">
                     <input class="form-check-input" type="checkbox" value="remember-me"> Remember me
                 </label>
-            </div>  
+            </div>
             <div class="form-group row">
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
-            </div>            
-        </fieldset>        
-    </form>
+            </div>
+        </fieldset>
+    }
+    @*<form action="@Request.Url.PathAndQuery" method="post" class="form-signin">
+    </form>*@
 </div>
 
