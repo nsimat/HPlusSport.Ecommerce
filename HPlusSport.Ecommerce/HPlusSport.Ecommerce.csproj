@@ -310,6 +310,7 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Shared\_LayoutNoFooter.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

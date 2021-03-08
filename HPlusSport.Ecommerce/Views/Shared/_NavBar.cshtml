@@ -1,0 +1,24 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark btn-dark">
+    <div class="container">
+        <a href='@Url.Action("Index", "Home")'>
+            <div class="hplus-logo"></div>
+        </a>        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSite">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active mx-3">
+                    @Html.ActionLink("Our Products", "Index", "Product", new { area = "" }, new { @class = "nav-link" })
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-2">
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="@Url.Action("Index", "Cart")">
+                        <span><i class="fas fa-shopping-cart"></i> Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
