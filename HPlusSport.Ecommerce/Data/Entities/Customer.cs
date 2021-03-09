@@ -31,11 +31,11 @@ namespace HPlusSport.Ecommerce.Data.Entities
 
         [Required]
         [StringLength(100)]
-        public string Region { get; set; }
+        public string State { get; set; }
 
         [Required]
         [StringLength(5)]
-        public string PostalCode { get; set; }
+        public string ZIPCode { get; set; }
 
         public virtual ICollection<Cart> Carts { get; set; }
 

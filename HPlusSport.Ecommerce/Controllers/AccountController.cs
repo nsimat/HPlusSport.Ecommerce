@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HPlusSport.Ecommerce.Data;
+using HPlusSport.Ecommerce.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +15,19 @@ namespace HPlusSport.Ecommerce.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            return View();
+            Customer customer = null;
+
+            using(var context = new HPlusSportDbContext())
+            {
+                var user = context.Users.FirstOrDefault(u => u.EmailAddress == User.Identity.Name);
+
+                if (user != null)
+                    customer = context.Customers.FirstOrDefault(c => c.CustomerId == user.CustomerId);
+
+                return View(customer);
+            }
+            
+            
         }        
     }
 }

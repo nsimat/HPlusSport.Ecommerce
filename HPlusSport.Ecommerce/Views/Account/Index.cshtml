@@ -1,7 +1,18 @@
-﻿@{
+﻿@model HPlusSport.Ecommerce.Data.Entities.Customer
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>My Account</h2>
+
+<p>
+    @Model.Address1 <br/>
+    @if (string.IsNullOrEmpty(Model.Address2)) 
+    {
+        @Model.Address2 <br/>
+    }
+    @Model.City, @Model.State @Model.ZIPCode
+</p>
 
