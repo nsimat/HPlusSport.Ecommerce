@@ -139,6 +139,11 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Data\Entities\Cart.cs" />
+    <Compile Include="Data\Entities\CartProduct.cs" />
+    <Compile Include="Data\Entities\Customer.cs" />
+    <Compile Include="Data\Entities\Product.cs" />
+    <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Filters\CrawlerFilter.cs" />
     <Compile Include="Filters\CustomExceptionHandler.cs" />
@@ -314,7 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\Entities\" />
     <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>
