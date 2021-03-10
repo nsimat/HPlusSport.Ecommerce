@@ -21,7 +21,7 @@ namespace HPlusSport.Ecommerce.Controllers
             // lookup the product name in the database
             ViewBag.Product = new Product
             {
-                Name = "Women winter's jacket",
+                Name = "Women's Winter Jacket",
                 FullPrice = 20.00M,
                 CurrentPrice = 16.00M,
                 PercentOff = 20,
